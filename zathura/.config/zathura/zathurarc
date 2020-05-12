@@ -21,7 +21,7 @@ set guioptions ""
 
 set font "inconsolata 15"
 #set default-bg "#000000" #00
-set default-bg "#1a1729" #00
+set default-bg "#0c0e10" #00
 set default-fg "#F7F7F6" #01
 
 set statusbar-fg "#B0B0B0" #04
@@ -50,7 +50,7 @@ set notification-fg "#151515" #00
 
 set recolor "true"
 #set recolor-lightcolor "#000000" #00
-set recolor-lightcolor "#1a1729" #00
+set recolor-lightcolor "#0c0e10" #00
 set recolor-darkcolor "#E0E0E0" #06
 set recolor-reverse-video "true"
 set recolor-keephue "false"
