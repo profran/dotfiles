@@ -5,6 +5,7 @@ export EDITOR=vim
 
 sxhkd &
 
+# TODO: Add multimonitor support
 bspc monitor DP-2-2 -d 一 二 三 四 五 六 七 八 九 十
 
 bspc config border_width         1
@@ -39,7 +40,7 @@ dunst &
 xsetroot -cursor_name left_ptr
 
 # Compositor and Wallpaper
-feh --bg-fill $HOME/Pictures/wallpapers/t440p-exploded.png
+feh --bg-fill $HOME/Pictures/wallpapers/norwey.png
 
 $HOME/.config/feh-blur/feh-blur -s
 
@@ -49,4 +50,4 @@ picom --backend glx &
 
 # Bar
 $HOME/.config/polybar/launch.sh
-bspc config top_padding 28
+bspc config bottom_padding 28
