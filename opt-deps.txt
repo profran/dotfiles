@@ -1,0 +1,21 @@
+chromium
+code
+discord
+docker
+docker-compose
+dropbox
+ghc
+gimp
+krita
+libreoffice-fresh
+ncdu
+neofetch
+openboard
+pycharm-professional
+sane
+simple-scan
+spicetify-cli
+spicetify-themes-git r4.ae45f4d-1
+spotify
+telegram-desktop
+vlc
