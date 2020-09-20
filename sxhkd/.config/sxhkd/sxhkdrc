@@ -9,6 +9,9 @@ super + Return
 super + alt + Return
   kitty --name float
 
+super + h
+  kitty --name float htop
+
 # program launcher
 alt + s
 	rofi -theme nordx -modi 'drun,window,run' -show drun
@@ -93,13 +96,21 @@ super + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
+# rotate desktop nodes 180 degrees
+super + shift + r
+  bspc node @/ -R 180
+
+# rotate parent node 90 degrees
+super + r
+  bspc node @parent -R 90
+
 # focus or send to the given desktop
 #super + {_,shift + }{1-9,0}
 #	bspc {desktop -f,node -d} '^{1-9,10}'
 
 # focus to given desktop
 super + {1-9,0}
-	bspc desktop -f '^{1-9,10}'
+	bspc desktop -f {'一','二','三','四','五','六','七','八','九','十'}
 
 # send to given desktop
 super + shift + {1-9,0}
@@ -155,13 +166,16 @@ ctrl + super + alt + {Left,Down,Up,Right}
 super  + ctrl + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+#
 # custom shortcuts
+#
+
 super + e
   kitty --name float ranger
 
 # lock screen
 super + l
-  betterlockscreen -l blur
+  betterlockscreen -l dimblur
 
 # Screenshots
 Print
@@ -173,6 +187,10 @@ ctrl + Print
 shift + Print
   flameshot gui
 
+# pavucontrol
+
+super + x 
+  pavucontrol
 # media keys 
 
 XF86AudioRaiseVolume
@@ -200,3 +218,13 @@ XF86AudioPrev
 #Stop
 XF86AudioStop
     playerctl stop
+
+# Add focused window to a tabbed instance in given direction
+super + p; {h,j,k,l}
+    $HOME/Builds/tabbed.sh $(bspc query -N -n {west,south,north,east}) add $(bspc query -N -n focused)
+
+# Remove one tab from tabbed
+super + p; r
+    tabbed=$(bspc query -N -n focused); \
+    child=$(tabc.sh $tabbed list | head -n1); \
+    $HOME/Builds/tabbed.sh $tabbed remove $child

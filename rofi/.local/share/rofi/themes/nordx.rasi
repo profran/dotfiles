@@ -1,5 +1,5 @@
 configuration {
-  show-icons: true;
+  show-icons: false;
   icon-theme: "Papirus";
   font: "Fira Code Medium 10";
   drun-display-format: "{icon} {name}";
@@ -9,7 +9,7 @@ configuration {
 }
 
 * {
-  background-color: #000000;
+  background-color: #0c0e10;
   bg-alt: #474747;
   fg: #ECEFF4;
 

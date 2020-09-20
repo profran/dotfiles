@@ -22,7 +22,7 @@ include-file = ~/.config/polybar/modules/bspwm.ini
 include-file = ~/.config/polybar/modules/audio.ini
 include-file = ~/.config/polybar/modules/network.ini
 include-file = ~/.config/polybar/modules/wedder.ini
-;include-file = ~/.config/polybar/modules/bluetooth.ini
+include-file = ~/.config/polybar/modules/battery.ini
 
 [colors]
 ;background = ${xrdb:color0:#222}
@@ -58,17 +58,17 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Fira Code Regular:style=regular:pixelsize=10;1
-font-1 = FontAwesome5Free:style=Solid:pixelsize=10;1
-font-2 = FontAwesome5Brands:style=Solid:pixelsize=10;1
-font-3 = FontAwesome5Free:style=Regular:pixelsize=10;1
-font-4 = FontAwesome5Brands:style=Regular:pixelsize=10;1
-font-5 = Source Han Sans JP Normal:pixelsize=10;1
-font-6 = NotoSans Nerd Font:style=Regular:size=10;1
+font-0 = Fira Code Regular:style=Regular:pixelsize=10;1
+;font-1 = FontAwesome5Free:style=Solid:pixelsize=10;1
+;font-2 = FontAwesome5Brands:style=Solid:pixelsize=10;1
+;font-3 = FontAwesome5Free:style=Regular:pixelsize=10;1
+;font-4 = FontAwesome5Brands:style=Regular:pixelsize=10;1
+font-1 = Noto Sans Mono CJK JP:style=Regular:pixelsize=10;1
+font-2 = NotoSans Nerd Font:style=Regular:size=10;1
 
 modules-left = date wedder
 modules-center = bspwm
-modules-right = volume wlan bluetooth
+modules-right = volume wlan battery
 
 tray-position = right 
 tray-padding = 2
@@ -78,10 +78,6 @@ wm-restack = bspwm
 
 override-redirect = true
 
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
-
 cursor-click = pointer
-cursor-scroll = ns-resize
 
 ; vim:ft=dosini
