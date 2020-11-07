@@ -33,20 +33,21 @@ reorder_bspwm() {
   #bspc monitor $monR -r
   res=$(xrandr | grep $mon | grep -o "[0-9]*x[0-9]*+[0-9]*+[0-9]")
   bspc monitor $mon -g $res
+  bspc monitor $mon -d 一 二 三 四 五 六 七 八 九 十
   
  
 
   #for desk in $(bspc query -m $monR -D); do
   #  bspc desktop $desk --to-monitor $mon
   #done
-  for desk in {'一','二','三','四','五','六','七','八','九','十'}; do
-    bspc desktop "$desk" --to-monitor $mon
-  done
+  #for desk in {'一','二','三','四','五','六','七','八','九','十'}; do
+  #  bspc desktop "$desk" --to-monitor $mon
+  #done
 
-  bspc desktop Desktop -r
+  #bspc desktop Desktop -r
   #bspc monitor $mon -d $DESKS
 
-  bspc monitor $monR -r
+  #bspc monitor $monR -r
 
   #bspc monitor $mon -d $DESKS
   #bspc monitor $monR -s $mon

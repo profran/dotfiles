@@ -1,3 +1,20 @@
-<Multi_key> <g> <a> : "α"
-<Multi_key> <g> <b> : "β"
-<Multi_key> <g> <g> : "γ"
+# Deutsche Zeichen
+<Multi_key> <s> <s> : "β"
+<Multi_key> <a> <e> : "ä"
+<Multi_key> <u> <e> : "ü"
+<Multi_key> <o> <e> : "ö"
+
+<Multi_key> <S> <S> : "ẞ"
+<Multi_key> <A> <E> : "Ä"
+<Multi_key> <U> <E> : "Ö"
+<Multi_key> <O> <E> : "Ü"
+
+# Spanish caracters
+<Multi_key> <n> <n> : "ñ"
+# <Multi_key> <'> <a> : "á"
+# <Multi_key> <n> <n> : "é"
+# <Multi_key> <n> <n> : "í"
+# <Multi_key> <n> <n> : "ó"
+# <Multi_key> <n> <n> : "ú"
+
+<Multi_key> <N> <N> : "Ñ"

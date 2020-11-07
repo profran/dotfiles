@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/profran'
 let g:netrw_dirhist_6='/home/profran/.dotfiles/rofi/.local/share/rofi/themes'
 let g:netrw_dirhist_5='/home/profran/.dotfiles/rofi/.local/share/rofi'
 let g:netrw_dirhist_4='/home/profran/.dotfiles/rofi/.local/share'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_1='/home/profran/.dotfiles/polybar/.config/polybar/modules'
 let g:netrw_dirhist_0='/home/profran/.dotfiles/picom/.config/picom'
 let g:netrw_dirhist_9='/home/profran/.dotfiles/picom/.config'
 let g:netrw_dirhist_8='/home/profran/.dotfiles/picom/.config/picom'
-let g:netrw_dirhist_7='/home/profran/.dotfiles/picom/.config'

@@ -22,7 +22,7 @@ bspc config normal_border_color "#000000"
 bspc rule -r "*"
 
 bspc rule -a Chromium desktop='^3' border=off follow=on
-bspc rule -a firefox desktop='^3' border=off follow=on
+bspc rule -a brave-browser desktop='^3' border=off follow=on
 bspc rule -a firefox:Devtools state=floating center=true
 bspc rule -a discord desktop='^2' border=off
 bspc rule -a TelegramDesktop desktop='^1' border=off
@@ -46,9 +46,9 @@ xsetroot -cursor_name left_ptr
 # Compositor and Wallpaper
 feh --bg-fill $HOME/Pictures/wallpapers/mountains_2.jpeg
 
-$HOME/.config/feh-blur/feh-blur -s
+# $HOME/.config/feh-blur/feh-blur -s
 
-$HOME/.config/feh-blur/feh-blur -d -b 8
+# $HOME/.config/feh-blur/feh-blur -d -b 8
 
 picom --backend glx &
 
