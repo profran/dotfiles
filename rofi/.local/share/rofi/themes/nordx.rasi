@@ -1,7 +1,7 @@
 configuration {
   show-icons: false;
   icon-theme: "Papirus";
-  font: "Fira Code Medium 10";
+  font: "JetBrains Mono 10";
   drun-display-format: "{icon} {name}";
   display-run: " ";
   display-drun: " ";
@@ -9,7 +9,7 @@ configuration {
 }
 
 * {
-  background-color: #0c0e10;
+  background-color: #0c0e1040;
   bg-alt: #474747;
   fg: #ECEFF4;
 
@@ -26,7 +26,7 @@ window {
   width: 30%;
   transparency: "real";
   border-radius: 6;
-  border: 1;
+  border: none;
   border-color: #2e2e2e;
 }
 

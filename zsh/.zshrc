@@ -101,3 +101,7 @@ source $ZSH/oh-my-zsh.sh
 alias e="exit"
 alias c="clear"
 export PATH="$PATH:$HOME/.development/flutter/bin"
+
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi

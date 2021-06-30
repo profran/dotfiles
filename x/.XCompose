@@ -11,10 +11,15 @@
 
 # Spanish caracters
 <Multi_key> <n> <n> : "ñ"
-# <Multi_key> <'> <a> : "á"
-# <Multi_key> <n> <n> : "é"
-# <Multi_key> <n> <n> : "í"
-# <Multi_key> <n> <n> : "ó"
-# <Multi_key> <n> <n> : "ú"
+<Multi_key> <a> <a> : "á"
+<Multi_key> <e> <e> : "é"
+<Multi_key> <i> <i> : "í"
+<Multi_key> <o> <o> : "ó"
+<Multi_key> <u> <u> : "ú"
 
 <Multi_key> <N> <N> : "Ñ"
+<Multi_key> <A> <A> : "á"
+<Multi_key> <E> <e> : "é"
+<Multi_key> <I> <I> : "í"
+<Multi_key> <O> <O> : "ó"
+<Multi_key> <U> <U> : "ú"

@@ -12,9 +12,12 @@ super + alt + Return
 super + h
   kitty --name float htop
 
+super + n
+  kitty --name float neofetch
+
 # program launcher
 alt + s
-	rofi -theme nordx -modi 'drun,window,run' -show drun
+	rofi -theme nordx -modi 'drun,window,run' -sorting-method fzf -sort -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -110,11 +113,11 @@ super + r
 
 # focus to given desktop
 super + {1-9,0}
-	bspc desktop -f {'一','二','三','四','五','六','七','八','九','十'}
+	bspc desktop -f {1-9,0}
 
 # send to given desktop
 super + shift + {1-9,0}
-  bspc node -d '^{1-9,10}'
+  bspc node -d {1-9,10}
 
 # move to desktop
 #ctrl + alt + {Left,Right}
@@ -187,10 +190,14 @@ ctrl + Print
 shift + Print
   flameshot gui
 
-# pavucontrol
+# OCR
+ctrl + shift + o
+  imageocr
 
+# pavucontrol
 super + x 
   pavucontrol
+
 # media keys 
 
 XF86AudioRaiseVolume
@@ -219,12 +226,3 @@ XF86AudioPrev
 XF86AudioStop
     playerctl stop
 
-# Add focused window to a tabbed instance in given direction
-super + p; {h,j,k,l}
-    $HOME/Builds/tabbed.sh $(bspc query -N -n {west,south,north,east}) add $(bspc query -N -n focused)
-
-# Remove one tab from tabbed
-super + p; r
-    tabbed=$(bspc query -N -n focused); \
-    child=$(tabc.sh $tabbed list | head -n1); \
-    $HOME/Builds/tabbed.sh $tabbed remove $child

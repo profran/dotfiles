@@ -5,9 +5,6 @@ set softtabstop=2
 set autoindent
 set expandtab
 
-"hardmode
-noremap <Up> <Down> <Left> <Right> <Nop>
-
 "Other
 set number
 set relativenumber
