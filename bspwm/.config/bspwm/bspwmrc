@@ -56,7 +56,7 @@ dunst &
 xsetroot -cursor_name left_ptr
 
 # Compositor and Wallpaper
-feh --bg-fill $HOME/Pictures/wallpapers/mountains_2.jpeg
+feh --bg-fill $HOME/Pictures/wallpaper
 
 # $HOME/.config/feh-blur/feh-blur -s
 
