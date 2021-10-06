@@ -65,3 +65,8 @@ entry {
   padding: 12;
   text-color: @nord-yellow;
 }
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
