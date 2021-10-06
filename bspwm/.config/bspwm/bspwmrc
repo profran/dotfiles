@@ -9,15 +9,15 @@ setxkbmap -option compose:menu
 sxhkd &i
 
 # TODO: Move this conditional statement to a separate file
-if [[ $(xrandr -q | grep "DVI-D-1 connected") ]]; then
-  xrandr --output HDMI-1 --primary --mode 1920x1080 --output DVI-D-1 --mode 1920x1080 --left-of HDMI-1
+if [[ $(xrandr -q | grep "DVI-D-0 connected") ]]; then
+  xrandr --output HDMI-A-0 --primary --mode 1920x1080 --output DVI-D-0 --mode 1920x1080 --left-of HDMI-A-0
 fi
 
 # TODO: Add multimonitor support
 # bspc monitor HDMI-1 -d 一 二 三 四 五 六 七 八 九 十
 
-bspc monitor HDMI-1 -d 1 2 3 4 5
-bspc monitor DVI-D-1 -d 6 7 8 9 10
+bspc monitor HDMI-A-0 -d 1 2 3 4 5
+bspc monitor DVI-D-0 -d 6 7 8 9 10
 
 bspc config border_width         1
 bspc config window_gap          12
@@ -34,7 +34,7 @@ bspc config border_width 0
 bspc rule -r "*"
 
 bspc rule -a Chromium desktop='3' border=off follow=on
-bspc rule -a Brave-browser desktop='3' border=off follow=on
+# bspc rule -a Brave-browser desktop='3' border=off follow=on
 bspc rule -a firefox:Devtools state=floating center=true
 bspc rule -a discord desktop='2' border=off
 bspc rule -a TelegramDesktop desktop='1' border=off
@@ -66,4 +66,4 @@ picom --backend glx &
 
 # Bar
 $HOME/.config/polybar/launch.sh
-bspc config -m HDMI-1 bottom_padding 28
+bspc config -m HDMI-A-0 bottom_padding 28
