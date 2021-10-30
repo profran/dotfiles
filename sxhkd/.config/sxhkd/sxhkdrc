@@ -226,3 +226,5 @@ XF86AudioPrev
 XF86AudioStop
     playerctl stop
 
+super + alt + i
+    kitty --name float ipython
