@@ -1,0 +1,5 @@
+#!/bin/sh
+
+for video in *.mkv; do
+    ffmpeg -i "$video" -map 0:s:0 -c:s text -f srt "subs.en/${video%.*}.srt"
+done

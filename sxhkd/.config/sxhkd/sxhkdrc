@@ -16,7 +16,7 @@ super + n
   kitty --name float neofetch
 
 # program launcher
-alt + s
+alt + space
 	rofi -theme nordx -modi 'drun,window,run' -sorting-method fzf -sort -show drun
 
 # make sxhkd reload its configuration files:
@@ -224,3 +224,43 @@ XF86AudioStop
 
 super + alt + i
     kitty --name float ipython
+
+# keymmerse
+ctrl + shift + alt + 0
+	mpv-ipc -c "cycle pause"
+
+ctrl + shift + alt + 1
+	mpv --idle --force-window --no-terminal
+
+ctrl + shift + alt + 5
+	mpv-ipc -c "script-binding mpvacious-update-last-note"
+
+ctrl + shift + alt + 7
+	mpv-ipc -c "script-binding mpvacious-sub-seek-back"
+
+ctrl + shift + alt + 8
+	mpv-ipc -c "script-binding mpvacious-sub-replay"
+
+ctrl + shift + alt + 9
+	mpv-ipc -c "script-binding mpvacious-sub-seek-forward"
+
+ctrl + shift + alt + F1
+	notify-send "aaaaaa"
+
+ctrl + shift + alt + super + 0
+	find-set-vol -v +5%
+
+ctrl + shift + alt + super + 1
+	find-set-vol -v -5%
+
+ctrl + shift + alt + super + 2
+	playerctl -p spotify play-pause
+
+ctrl + shift + alt + super + 3
+	pactl set-sink-volume 0 +5%
+
+ctrl + shift + alt + super + 4
+	pactl set-sink-volume 0 -5%
+
+ctrl + shift + alt + super + 5
+	pactl set-sink-mute 0 toggle
