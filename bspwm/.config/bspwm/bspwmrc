@@ -10,14 +10,15 @@ sxhkd &i
 
 # TODO: Move this conditional statement to a separate file
 if [[ $(xrandr -q | grep "DVI-D-0 connected") ]]; then
-  xrandr --output HDMI-A-0 --primary --mode 1920x1080 --output DVI-D-0 --mode 1920x1080 --left-of HDMI-A-0
+  xrandr --output HDMI-A-0 -r 75 --primary --mode 1920x1080 --output DVI-D-0 --mode 1920x1080 --left-of HDMI-A-0
 fi
 
 # TODO: Add multimonitor support
 # bspc monitor HDMI-1 -d 一 二 三 四 五 六 七 八 九 十
 
 bspc monitor HDMI-A-0 -d 1 2 3 4 5
-bspc monitor DVI-D-0 -d 6 7 8 9 10
+bspc monitor DVI-D-0 -d 6 7 8 9 0
+# bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9 0
 
 bspc config border_width         1
 bspc config window_gap          12

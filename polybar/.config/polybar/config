@@ -31,9 +31,9 @@ background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #f22aae
+primary = #90a57d
 ;primary = #ffffffff
-secondary = #e60053
+secondary = #90a57d
 alert = #bd2c40
 
 [bar/bar]

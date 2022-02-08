@@ -9,8 +9,8 @@ configuration {
 }
 
 * {
-  background-color: #0c0e1040;
-  bg-alt: #474747;
+  background-color: #1c1c1c;
+  bg-alt: #4d4d4d;
   fg: #ECEFF4;
 
   nord-blue-light: #ffffff;
