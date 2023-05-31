@@ -2,6 +2,12 @@
 # wm independent hotkeys
 #
 
+ctrl + alt + p
+  kill -STOP $(xdotool getwindowpid $(xdotool getwindowfocus))
+
+ctrl + alt + u
+  kill -CONT $(xdotool getwindowpid $(xdotool getwindowfocus))
+
 # terminal emulator
 super + Return
   kitty
@@ -113,7 +119,7 @@ super + {1-9,0}
 
 # send to given desktop
 super + shift + {1-9,0}
-  bspc node -d {1-9,10}
+  bspc node -d {1-9,0}
 
 # move to desktop
 #ctrl + alt + {Left,Right}
@@ -178,13 +184,13 @@ super + l
 
 # Screenshots
 Print
-  flameshot full -p ~/Pictures
+  flameshot gui
 
 ctrl + Print
   flameshot full -c
 
 shift + Print
-  flameshot gui
+  flameshot full -p ~/Pictures
 
 # OCR
 ctrl + shift + o
@@ -234,6 +240,9 @@ ctrl + shift + alt + 1
 
 ctrl + shift + alt + 5
 	mpv-ipc -c "script-binding mpvacious-update-last-note"
+
+ctrl + shift + alt + 6
+	maimocr
 
 ctrl + shift + alt + 7
 	mpv-ipc -c "script-binding mpvacious-sub-seek-back"
