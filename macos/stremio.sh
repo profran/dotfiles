@@ -1,0 +1,1 @@
+sudo codesign --force --deep --sign - /Applications/Stremio.app
