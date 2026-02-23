@@ -2,7 +2,7 @@
 
 add_newline = false
 format = """
-$hostname$directory$git_branch
+$hostname$python$directory$git_branch
 $character
 """
 right_format = """
@@ -36,6 +36,10 @@ disabled = true
 # Disable node
 [nodejs]
 disabled = true
+
+[python]
+format = "[\\($virtualenv\\)]($style) "
+
 
 [cmd_duration]
 min_time = 0
