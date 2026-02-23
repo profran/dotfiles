@@ -1,0 +1,38 @@
+#!/bin/sh
+# Args: 1 -> FileName; 2 -> Function
+display() {
+  
+  if ! pdflatex -halt-on-error $1 | grep '^!.*' -A200 --color=always 2>&1
+  then
+    if [ ! -e /dev/shm/$1 >/dev/null 2>&1 ]
+    then
+      touch /dev/shm/$1
+      zathura $2.pdf &
+      echo $! >> /dev/shm/$1
+    fi
+  fi
+}
+
+clean() {
+  kill $pid >/dev/null 2>&1 
+  rm /dev/shm/$1 >/dev/null 2>&1
+}
+
+main() {
+  pid=$(cat /dev/shm/$1 2> /dev/null)
+  
+  if ! ps -p $pid 2>&1 | grep $pid >/dev/null 2>&1
+  then
+    clean "$@"
+  fi
+
+  if [ $3 = "--display" ]
+  then
+    display "$@"
+  elif [ $3 = "--clean" ]
+  then
+    clean "$@"
+  fi
+}
+
+main "$@"

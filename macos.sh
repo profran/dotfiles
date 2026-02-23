@@ -1,0 +1,1 @@
+stow zsh zsh-macos ghostty kitty nvim vim tmux starship

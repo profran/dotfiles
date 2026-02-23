@@ -1,0 +1,16 @@
+#!/bin/sh
+
+SOCKETS_DIR="/tmp/mpvSockets"
+
+while getopts c: option
+do
+    case "${option}" in
+        c) COMMAND=${OPTARG};;
+    esac
+done
+
+
+for SOCKET in $(ls $SOCKETS_DIR)
+do
+    echo $COMMAND | socat - $SOCKETS_DIR/$SOCKET
+done

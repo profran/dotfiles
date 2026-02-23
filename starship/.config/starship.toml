@@ -1,0 +1,40 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+format = """
+$directory$git_branch
+$character
+"""
+right_format = """
+$cmd_duration$time
+"""
+command_timeout = 1000
+
+[character] # The name of the module we are configuring is 'character'
+success_symbol = "[󰘧](bold green)" # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = "[󰘧](bold red)"
+
+[time]
+disabled = false
+format = '[$time]($style)'
+time_format = '%T'
+# utc_time_offset = '-3'
+# time_range = '08:00:00-16:00:00'
+
+[git_branch]
+format ="[\\($branch(:$remote_branch)\\)]($style)"
+
+# Disable aws
+[aws]
+disabled = true
+
+# Disable node
+[nodejs]
+disabled = true
+
+[cmd_duration]
+min_time = 0
+format = '[$duration]($style) '
+style = "245"
+
+show_milliseconds = true

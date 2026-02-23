@@ -1,0 +1,13 @@
+#!/bin/bash
+
+while getopts v: option
+do
+    case "${option}" in
+        v) VOLUME=${OPTARG};;
+    esac
+done
+
+spotify=$(pactl list short | grep "spotify" | awk '{print $1}')
+sinkinput=$(pactl list short | pcregrep -o1 "([0-9]+)\s+[0-9]+\s+$spotify.*PipeWire")
+
+pactl set-sink-input-volume $sinkinput $VOLUME

@@ -1,0 +1,10 @@
+#!/usr/bin/python
+
+import os
+import glob
+
+subs_list = sorted(glob.glob("*.srt"))
+eps_list = sorted(glob.glob("*.mkv"))
+
+for sub, ep in zip(subs_list, eps_list):
+    os.rename(sub, ep[:-3] + "srt")

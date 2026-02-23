@@ -1,0 +1,27 @@
+include "%L"
+
+# Deutsche Zeichen
+<Multi_key> <s> <s> : "β"
+<Multi_key> <a> <e> : "ä"
+<Multi_key> <u> <e> : "ü"
+<Multi_key> <o> <e> : "ö"
+
+<Multi_key> <S> <S> : "ẞ"
+<Multi_key> <A> <E> : "Ä"
+<Multi_key> <U> <E> : "Ö"
+<Multi_key> <O> <E> : "Ü"
+
+# Caracteres del Español
+<Multi_key> <n> <n> : "ñ"
+<Multi_key> <a> <a> : "á"
+<Multi_key> <e> <e> : "é"
+<Multi_key> <i> <i> : "í"
+<Multi_key> <o> <o> : "ó"
+<Multi_key> <u> <u> : "ú"
+
+<Multi_key> <N> <N> : "Ñ"
+<Multi_key> <A> <A> : "Á"
+<Multi_key> <E> <E> : "É"
+<Multi_key> <I> <I> : "Í"
+<Multi_key> <O> <O> : "Ó"
+<Multi_key> <U> <U> : "Ú"
