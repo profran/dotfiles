@@ -16,7 +16,7 @@ error_symbol = "[󰘧](bold red)"
 
 [hostname]
 ssh_only = true
-format = "on [$hostname](bold red) "
+format = "[$hostname](bold red) "
 disabled = false
 
 [time]
